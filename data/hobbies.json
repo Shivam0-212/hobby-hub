@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "title": "Photography",
+    "description": "Capture moments and express creativity through the lens of a camera. Learn composition, lighting, and editing.",
+    "category": "Arts & Crafts",
+    "image": "https://images.unsplash.com/photo-1452780212940-6f5c0d14d848?w=400&h=250&fit=crop",
+    "difficulty": "Beginner",
+    "timeRequired": "2-3 hours/week",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Gardening",
+    "description": "Grow your own vegetables, herbs, and flowers. Connect with nature and enjoy the rewards of nurturing plants.",
+    "category": "Outdoor",
+    "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=250&fit=crop",
+    "difficulty": "Beginner",
+    "timeRequired": "3-4 hours/week",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Guitar Playing",
+    "description": "Learn to strum chords, play melodies and perform your favourite songs on the acoustic or electric guitar.",
+    "category": "Music",
+    "image": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400&h=250&fit=crop",
+    "difficulty": "Intermediate",
+    "timeRequired": "5-7 hours/week",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "Painting",
+    "description": "Express yourself through watercolor, acrylic, or oil paints. Create beautiful artwork for your home.",
+    "category": "Arts & Crafts",
+    "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=250&fit=crop",
+    "difficulty": "Beginner",
+    "timeRequired": "3-5 hours/week",
+    "featured": false
+  },
+  {
+    "id": 5,
+    "title": "Rock Climbing",
+    "description": "Challenge yourself physically and mentally by scaling walls indoors or exploring outdoor cliffs.",
+    "category": "Sports",
+    "image": "https://images.unsplash.com/photo-1522163182402-834f871fd851?w=400&h=250&fit=crop",
+    "difficulty": "Advanced",
+    "timeRequired": "4-6 hours/week",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "title": "Cooking",
+    "description": "Explore world cuisines, master new recipes, and impress family and friends with delicious homemade meals.",
+    "category": "Food & Drink",
+    "image": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=400&h=250&fit=crop",
+    "difficulty": "Beginner",
+    "timeRequired": "2-4 hours/week",
+    "featured": false
+  },
+  {
+    "id": 7,
+    "title": "Reading",
+    "description": "Expand your knowledge and imagination by diving into fiction, non-fiction, biographies, and more.",
+    "category": "Education",
+    "image": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=250&fit=crop",
+    "difficulty": "Beginner",
+    "timeRequired": "1-2 hours/week",
+    "featured": false
+  },
+  {
+    "id": 8,
+    "title": "Yoga",
+    "description": "Improve flexibility, strength, and mental clarity through mindful poses and breathing exercises.",
+    "category": "Health & Fitness",
+    "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=250&fit=crop",
+    "difficulty": "Beginner",
+    "timeRequired": "3-5 hours/week",
+    "featured": false
+  },
+  {
+    "id": 9,
+    "title": "Chess",
+    "description": "Sharpen strategic thinking and problem-solving skills in this classic board game played worldwide.",
+    "category": "Games",
+    "image": "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=400&h=250&fit=crop",
+    "difficulty": "Intermediate",
+    "timeRequired": "2-4 hours/week",
+    "featured": false
+  },
+  {
+    "id": 10,
+    "title": "BGMI",
+    "description": "winner winner chicken dinner",
+    "category": "Games",
+    "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop",
+    "difficulty": "Intermediate",
+    "timeRequired": "1-2 hours/week",
+    "featured": false
+  }
+]

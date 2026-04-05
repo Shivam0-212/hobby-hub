@@ -1,0 +1,15 @@
+{
+  "name": "hobby-hub",
+  "version": "1.0.0",
+  "description": "Hobby Hub - A full-stack Node.js + Express + EJS web application",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "ejs": "^3.1.10"
+  }
+}

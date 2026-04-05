@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1775026396570,
+    "name": "Creative Arts Meetup 🎨",
+    "date": "2026-04-22",
+    "hobby": "Arts & Crafts",
+    "joined": 0
+  },
+  {
+    "id": 1775026360503,
+    "name": "Fitness Challenge 💪",
+    "date": "2026-04-25",
+    "hobby": "Health & Fitness",
+    "joined": 0
+  },
+  {
+    "id": 1775026317691,
+    "name": "Guitar Jam Session 🎸",
+    "date": "2026-04-20",
+    "hobby": "General",
+    "joined": 0
+  },
+  {
+    "id": 1774820857208,
+    "name": "Photography Walk in City",
+    "date": "2026-04-15",
+    "hobby": "Photography",
+    "joined": 2
+  }
+]

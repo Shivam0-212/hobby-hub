@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo"><a href="/">🎯 Hobby Hub</a></div>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/explore" class="nav-link">Explore Hobbies</a></li>
+          <li><a href="/add" class="nav-link">Add Hobby</a></li>
+          <li><a href="/community" class="nav-link active">Community</a></li>
+          <li><a href="/dashboard" class="nav-link">Dashboard</a></li>
+          <li><a href="/about" class="nav-link">About / Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <h1>Community</h1>
+        <p>Share posts and join events with fellow hobby enthusiasts.</p>
+      </div>
+    </section>
+
+    <% if (success === 'post') { %>
+      <div style="background:#d1fae5;color:#065f46;padding:12px 24px;text-align:center;">✅ Post added!</div>
+    <% } else if (success === 'event') { %>
+      <div style="background:#d1fae5;color:#065f46;padding:12px 24px;text-align:center;">✅ Event created!</div>
+    <% } %>
+
+    <!-- POSTS -->
+    <section style="padding:48px 0;">
+      <div class="container">
+        <h2 class="section-title" style="margin-bottom:24px;">📝 Community Posts</h2>
+
+        <form action="/community/post" method="POST"
+              style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:24px;margin-bottom:32px;">
+          <div class="form-group">
+            <label class="form-label">Post Title</label>
+            <input type="text" name="postTitle" class="form-input" placeholder="e.g. My photography tips" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">What's on your mind?</label>
+            <textarea name="postBody" class="form-input form-textarea" rows="3"
+                      placeholder="Share tips, stories or questions..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Post</button>
+        </form>
+
+        <% if (posts.length === 0) { %>
+          <p style="color:#718096;">No posts yet. Be the first!</p>
+        <% } else { %>
+          <% posts.forEach(function(post) { %>
+            <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px;margin-bottom:16px;">
+              <h3 style="font-size:1rem;margin-bottom:6px;"><%= post.title %></h3>
+              <p style="color:#718096;font-size:0.9rem;margin-bottom:8px;"><%= post.body %></p>
+              <small style="color:#a0aec0;"><%= post.date %></small>
+            </div>
+          <% }); %>
+        <% } %>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section style="padding:48px 0;background:#fff;">
+      <div class="container">
+        <h2 class="section-title" style="margin-bottom:24px;">📅 Hobby Events</h2>
+
+        <form action="/community/event" method="POST"
+              style="background:#f7f8fc;border:1px solid #e2e8f0;border-radius:12px;padding:24px;margin-bottom:32px;">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Event Name</label>
+              <input type="text" name="eventName" class="form-input" placeholder="e.g. Photography Walk" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Date</label>
+              <input type="date" name="eventDate" class="form-input" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Related Hobby</label>
+            <input type="text" name="eventHobby" class="form-input" placeholder="e.g. Photography" />
+          </div>
+          <button type="submit" class="btn btn-primary">Create Event</button>
+        </form>
+
+        <% if (events.length === 0) { %>
+          <p style="color:#718096;">No events yet. Create one above!</p>
+        <% } else { %>
+          <div class="hobbies-grid">
+            <% events.forEach(function(ev) { %>
+              <div style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px;">
+                <h3 style="font-size:1rem;margin-bottom:6px;"><%= ev.name %></h3>
+                <p style="color:#718096;font-size:0.88rem;">📅 <%= ev.date %></p>
+                <p style="color:#718096;font-size:0.88rem;margin-bottom:12px;">🎯 <%= ev.hobby %></p>
+                <div style="display:flex;align-items:center;gap:12px;">
+                  <form action="/community/join/<%= ev.id %>" method="POST" style="margin:0;">
+                    <button type="submit" class="btn btn-primary" style="padding:6px 16px;font-size:0.85rem;">Join</button>
+                  </form>
+                  <span style="color:#718096;font-size:0.85rem;"><%= ev.joined || 0 %> joined</span>
+                </div>
+              </div>
+            <% }); %>
+          </div>
+        <% } %>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="padding:20px 0;text-align:center;opacity:0.6;font-size:0.85rem;">
+        &copy; 2024 Hobby Hub. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
